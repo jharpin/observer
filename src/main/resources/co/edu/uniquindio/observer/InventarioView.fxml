@@ -13,11 +13,19 @@
                         <padding>
                             <Insets top="15" right="15" bottom="15" left="15"/>
                         </padding>
-                        <Label text="Cambiar Stock:"/>
-                        <TextField fx:id="stockField" promptText="Ingrese nuevo stock"/>
-                        <Button text="Actualizar Stock" onAction="#actualizarStock"/>
+
+                        <Label text="Cliente 1:" />
+                        <TextField fx:id="stockCliente1Field" promptText="Stock Cliente 1" />
+                        <ComboBox fx:id="comboCliente1" promptText="Método de pago Cliente 1" />
+
+                        <Label text="Cliente 2:" />
+                        <TextField fx:id="stockCliente2Field" promptText="Stock Cliente 2" />
+                        <ComboBox fx:id="comboCliente2" promptText="Método de pago Cliente 2" />
+
+                        <Button text="Actualizar" onAction="#actualizarClientes" />
                     </VBox>
                 </Tab>
+
                 <Tab text="Cliente 1">
                     <VBox spacing="10">
                         <padding>
@@ -25,8 +33,10 @@
                         </padding>
                         <Label text="Cliente 1:"/>
                         <Label fx:id="stockLabelCliente1" text="Stock actual: "/>
+                        <Label fx:id="metodoLabelCliente1" text="Método de pago: "/>
                     </VBox>
                 </Tab>
+
                 <Tab text="Cliente 2">
                     <VBox spacing="10">
                         <padding>
@@ -34,20 +44,22 @@
                         </padding>
                         <Label text="Cliente 2:"/>
                         <Label fx:id="stockLabelCliente2" text="Stock actual: "/>
+                        <Label fx:id="metodoLabelCliente2" text="Método de pago: "/>
                     </VBox>
                 </Tab>
+
                 <Tab text="Pagos">
                     <VBox spacing="10">
                         <padding>
                             <Insets top="15" right="15" bottom="15" left="15"/>
                         </padding>
-                        <Label text="Seleccione el método de pago:" />
-                        <ComboBox fx:id="comboMetodoPago" promptText="Método de pago" />
-                        <Label text="Monto del pago:" />
-                        <TextField fx:id="txtMonto" promptText="Ingrese monto" />
-                        <Button text="Realizar Pago" onAction="#realizarPago" />
-                        <Label text="Historial de Pagos:" />
-                        <ListView fx:id="listaHistorialPagos" prefHeight="150" />
+                        <Label text="Seleccione el método de pago:"/>
+                        <ComboBox fx:id="comboMetodoPago" promptText="Método de pago"/>
+                        <Label text="Monto del pago:"/>
+                        <TextField fx:id="txtMonto" promptText="Ingrese monto"/>
+                        <Button text="Realizar Pago" onAction="#realizarPago"/>
+                        <Label text="Historial de Pagos:"/>
+                        <ListView fx:id="listaHistorialPagos" prefHeight="150"/>
                     </VBox>
                 </Tab>
             </tabs>
